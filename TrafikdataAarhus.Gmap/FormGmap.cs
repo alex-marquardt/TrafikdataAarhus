@@ -7,12 +7,15 @@
     using GMap.NET.MapProviders;
     using GMap.NET.WindowsForms;
     using GMap.NET.WindowsForms.Markers;
+    using TrafikdataAarhus.ApiData.Data;
+    using TrafikdataAarhus.ApiData.DataProviders;
 
     public partial class FormGmap : Form
     {
         public FormGmap()
         {
             InitializeComponent();
+            ApiHelper.InitializeClient();
         }
 
         private void FormGmap_Load(object sender, EventArgs e)
@@ -46,6 +49,15 @@
             gmap.Overlays.Add(markers);
 
             gmap.Position = new PointLatLng(56.1763699180381, 10.1785437446976);
+        }
+
+        private async void buttonGetAarhusTrafikdata_Click(object sender, EventArgs e)
+        {
+            //var realtidsTrafikdata = new RealtidsTrafikdataDataProvider();
+            //await realtidsTrafikdata.GetRealtidsTrafikdataAarhus();
+
+            var ruteMaalePunkterMetadata = new RuteMaalepunkterMetadataDataProvider();
+            await ruteMaalePunkterMetadata.GetruteMaalepunkterMetadataAarhus();
         }
     }
 }

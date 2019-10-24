@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gmap = new GMap.NET.WindowsForms.GMapControl();
+            this.buttonGetAarhusTrafikdata = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // gmap
@@ -56,15 +57,28 @@
             this.gmap.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.gmap.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.gmap.ShowTileGridLines = false;
-            this.gmap.Size = new System.Drawing.Size(530, 450);
+            this.gmap.Size = new System.Drawing.Size(532, 450);
             this.gmap.TabIndex = 0;
             this.gmap.Zoom = 13D;
+            // 
+            // buttonGetAarhusTrafikdata
+            // 
+            this.buttonGetAarhusTrafikdata.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonGetAarhusTrafikdata.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonGetAarhusTrafikdata.Location = new System.Drawing.Point(550, 12);
+            this.buttonGetAarhusTrafikdata.Name = "buttonGetAarhusTrafikdata";
+            this.buttonGetAarhusTrafikdata.Size = new System.Drawing.Size(500, 47);
+            this.buttonGetAarhusTrafikdata.TabIndex = 1;
+            this.buttonGetAarhusTrafikdata.Text = "Get Aarhus Trafikdata";
+            this.buttonGetAarhusTrafikdata.UseVisualStyleBackColor = true;
+            this.buttonGetAarhusTrafikdata.Click += new System.EventHandler(this.buttonGetAarhusTrafikdata_Click);
             // 
             // FormGmap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1062, 474);
+            this.Controls.Add(this.buttonGetAarhusTrafikdata);
             this.Controls.Add(this.gmap);
             this.Name = "FormGmap";
             this.ShowIcon = false;
@@ -79,6 +93,7 @@
         #endregion
 
         private GMap.NET.WindowsForms.GMapControl gmap;
+        private System.Windows.Forms.Button buttonGetAarhusTrafikdata;
     }
 }
 

@@ -86,5 +86,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TrafikdataAarhus.ApiData\TrafikdataAarhus.ApiData.csproj">
+      <Project>{A58E4406-3FEA-4509-8A0D-53B507EA7D68}</Project>
+      <Name>TrafikdataAarhus.ApiData</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29324.140
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrafikdataAarhus.Gmap", "TrafikdataAarhus.Gmap\TrafikdataAarhus.Gmap.csproj", "{4EBDDA9E-91C0-4139-8A55-FE1EE49B9261}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrafikdataAarhus.ApiData", "TrafikdataAarhus.ApiData\TrafikdataAarhus.ApiData.csproj", "{9721DA27-C5B0-424A-B24E-83201C792C93}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrafikdataAarhus.ApiData", "TrafikdataAarhus.ApiData\TrafikdataAarhus.ApiData.csproj", "{A58E4406-3FEA-4509-8A0D-53B507EA7D68}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{4EBDDA9E-91C0-4139-8A55-FE1EE49B9261}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4EBDDA9E-91C0-4139-8A55-FE1EE49B9261}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4EBDDA9E-91C0-4139-8A55-FE1EE49B9261}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9721DA27-C5B0-424A-B24E-83201C792C93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9721DA27-C5B0-424A-B24E-83201C792C93}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9721DA27-C5B0-424A-B24E-83201C792C93}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9721DA27-C5B0-424A-B24E-83201C792C93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A58E4406-3FEA-4509-8A0D-53B507EA7D68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A58E4406-3FEA-4509-8A0D-53B507EA7D68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A58E4406-3FEA-4509-8A0D-53B507EA7D68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A58E4406-3FEA-4509-8A0D-53B507EA7D68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
