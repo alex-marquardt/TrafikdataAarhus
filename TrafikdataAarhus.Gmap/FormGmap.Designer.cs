@@ -56,7 +56,7 @@
             this.gmap.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.gmap.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.gmap.ShowTileGridLines = false;
-            this.gmap.Size = new System.Drawing.Size(608, 474);
+            this.gmap.Size = new System.Drawing.Size(530, 450);
             this.gmap.TabIndex = 0;
             this.gmap.Zoom = 13D;
             // 
@@ -64,11 +64,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1062, 498);
+            this.ClientSize = new System.Drawing.Size(1062, 474);
             this.Controls.Add(this.gmap);
             this.Name = "FormGmap";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trafikdata Aarhus Map";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormGmap_Load);
             this.ResumeLayout(false);
 

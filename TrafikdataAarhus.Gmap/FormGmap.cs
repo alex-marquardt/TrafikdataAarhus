@@ -26,7 +26,7 @@
             GMapMarker marker2 = new GMarkerGoogle(new PointLatLng(56.1763699180381, 10.1785437446976), GMarkerGoogleType.green_dot);
 
             // Start point tooltip
-            marker.ToolTipText = "\n Start: " + 56.1712485170938 + ", " + 10.15683662714 + "\n Status: OK";
+            marker.ToolTipText = "ReportId: " + 1164 + ". Status: OK" + "\n Start: " + 56.1712485170938 + ", " + 10.15683662714;
             marker.ToolTip.Fill = Brushes.White;
             marker.ToolTip.Foreground = Brushes.Black;
             marker.ToolTip.Stroke = Pens.Black;
@@ -34,7 +34,7 @@
             marker.ToolTipMode = MarkerTooltipMode.OnMouseOver;
 
             // End point tooltip
-            marker2.ToolTipText = "\n End: " + 56.1763699180381 + ", " + 10.1785437446976 + "\n Status: OK";
+            marker2.ToolTipText = "ReportId: " + 1164 + ". Status: OK" + "\n End: " + 56.1763699180381 + ", " + 10.1785437446976;
             marker2.ToolTip.Fill = Brushes.White;
             marker2.ToolTip.Foreground = Brushes.Black;
             marker2.ToolTip.Stroke = Pens.Black;
