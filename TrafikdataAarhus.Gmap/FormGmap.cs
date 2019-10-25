@@ -12,6 +12,8 @@
 
     public partial class FormGmap : Form
     {
+        Form formTrafikdata = new FormTrafikdata();
+
         public FormGmap()
         {
             InitializeComponent();
@@ -53,11 +55,17 @@
 
         private async void buttonGetAarhusTrafikdata_Click(object sender, EventArgs e)
         {
+            formTrafikdata.Show();
+
+            // adding data to datagrid
+            //var trafikdata = await RuteMaalepunkterMetadataDataProvider.GetRuteMaalepunkterMetadataDataProvider();
+            //DataGridData.ItemsSource = trafikdata;
+
             //var realtidsTrafikdata = new RealtidsTrafikdataDataProvider();
             //await realtidsTrafikdata.GetRealtidsTrafikdataAarhus();
 
-            var ruteMaalePunkterMetadata = new RuteMaalepunkterMetadataDataProvider();
-            await ruteMaalePunkterMetadata.GetruteMaalepunkterMetadataAarhus();
+            //var ruteMaalePunkterMetadata = new RuteMaalepunkterMetadataDataProvider();
+            //await ruteMaalePunkterMetadata.GetruteMaalepunkterMetadataAarhus();
         }
     }
 }
