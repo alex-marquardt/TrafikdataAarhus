@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.gmap = new GMap.NET.WindowsForms.GMapControl();
-            this.buttonGetAarhusTrafikdata = new System.Windows.Forms.Button();
             this.dataGridViewTrafikdata = new System.Windows.Forms.DataGridView();
             this.textBoxReportId = new System.Windows.Forms.TextBox();
             this.textBoxTimeStamp = new System.Windows.Forms.TextBox();
@@ -49,6 +48,7 @@
             this.labelPoint1Latitude = new System.Windows.Forms.Label();
             this.labelPoint2Latitude = new System.Windows.Forms.Label();
             this.timerUpdateDatabase = new System.Windows.Forms.Timer(this.components);
+            this.buttonGetNewTrafikdataUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTrafikdata)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,18 +80,6 @@
             this.gmap.Size = new System.Drawing.Size(678, 329);
             this.gmap.TabIndex = 0;
             this.gmap.Zoom = 13D;
-            // 
-            // buttonGetAarhusTrafikdata
-            // 
-            this.buttonGetAarhusTrafikdata.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonGetAarhusTrafikdata.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonGetAarhusTrafikdata.Location = new System.Drawing.Point(696, 294);
-            this.buttonGetAarhusTrafikdata.Name = "buttonGetAarhusTrafikdata";
-            this.buttonGetAarhusTrafikdata.Size = new System.Drawing.Size(554, 47);
-            this.buttonGetAarhusTrafikdata.TabIndex = 1;
-            this.buttonGetAarhusTrafikdata.Text = "Get Aarhus Trafikdata";
-            this.buttonGetAarhusTrafikdata.UseVisualStyleBackColor = true;
-            this.buttonGetAarhusTrafikdata.Click += new System.EventHandler(this.buttonGetAarhusTrafikdata_Click);
             // 
             // dataGridViewTrafikdata
             // 
@@ -281,11 +269,24 @@
             this.timerUpdateDatabase.Interval = 1000;
             this.timerUpdateDatabase.Tick += new System.EventHandler(this.timerUpdateDatabase_Tick);
             // 
+            // buttonGetNewTrafikdataUpdate
+            // 
+            this.buttonGetNewTrafikdataUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonGetNewTrafikdataUpdate.Enabled = false;
+            this.buttonGetNewTrafikdataUpdate.Location = new System.Drawing.Point(699, 303);
+            this.buttonGetNewTrafikdataUpdate.Name = "buttonGetNewTrafikdataUpdate";
+            this.buttonGetNewTrafikdataUpdate.Size = new System.Drawing.Size(551, 37);
+            this.buttonGetNewTrafikdataUpdate.TabIndex = 19;
+            this.buttonGetNewTrafikdataUpdate.Text = "Update trafikdata (new data available)";
+            this.buttonGetNewTrafikdataUpdate.UseVisualStyleBackColor = true;
+            this.buttonGetNewTrafikdataUpdate.Click += new System.EventHandler(this.buttonGetNewTrafikdataUpdate_Click);
+            // 
             // FormGmap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 676);
+            this.Controls.Add(this.buttonGetNewTrafikdataUpdate);
             this.Controls.Add(this.labelPoint1Latitude);
             this.Controls.Add(this.labelPoint2Latitude);
             this.Controls.Add(this.labelPoint1Longitude);
@@ -303,7 +304,6 @@
             this.Controls.Add(this.textBoxTimeStamp);
             this.Controls.Add(this.textBoxReportId);
             this.Controls.Add(this.dataGridViewTrafikdata);
-            this.Controls.Add(this.buttonGetAarhusTrafikdata);
             this.Controls.Add(this.gmap);
             this.Name = "FormGmap";
             this.ShowIcon = false;
@@ -320,7 +320,6 @@
         #endregion
 
         private GMap.NET.WindowsForms.GMapControl gmap;
-        private System.Windows.Forms.Button buttonGetAarhusTrafikdata;
         private System.Windows.Forms.DataGridView dataGridViewTrafikdata;
         private System.Windows.Forms.TextBox textBoxReportId;
         private System.Windows.Forms.TextBox textBoxTimeStamp;
@@ -339,6 +338,7 @@
         private System.Windows.Forms.Label labelPoint1Latitude;
         private System.Windows.Forms.Label labelPoint2Latitude;
         private System.Windows.Forms.Timer timerUpdateDatabase;
+        private System.Windows.Forms.Button buttonGetNewTrafikdataUpdate;
     }
 }
 

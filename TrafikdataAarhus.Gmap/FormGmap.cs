@@ -33,17 +33,18 @@
         // Load form
         private void FormGmap_Load(object sender, EventArgs e)
         {
-            // Use Bing map with server (no catch) and remove red marker in center of screen
+            // Use Bing mapprovider and use server access to get map
             gmap.MapProvider = BingMapProvider.Instance;
             GMaps.Instance.Mode = AccessMode.ServerOnly;
+
+            // Remove red cross
             gmap.ShowCenter = false;
 
             // Start coordinates (Aarhus)
             gmap.Position = new PointLatLng(56.15674, 10.21076);
-            
+
             // Add data from database to datagridview
-            var trafikdata = _trafikdataDataProvider.GetTrafikdataAarhus();
-            dataGridViewTrafikdata.DataSource = trafikdata;
+            dataGridViewTrafikdata.DataSource = _trafikdataDataProvider.GetTrafikdataAarhus();
         }
 
         // Click on cell in datagridview
@@ -55,16 +56,15 @@
             DrawRoute();
         }
 
-        // Button click (maybe delete??)
-        private void buttonGetAarhusTrafikdata_Click(object sender, EventArgs e)
+        // Get new update from database
+        private void buttonGetNewTrafikdataUpdate_Click(object sender, EventArgs e)
         {
-            //formTrafikdata.Show();
+            dataGridViewTrafikdata.DataSource = _trafikdataDataProvider.GetTrafikdataAarhus();
 
-            // Update realtids trafikdata / insert new data in dabase
+            // disable update button
+            buttonGetNewTrafikdataUpdate.Enabled = false;
 
-            //var realtidsTrafikdata = new RealtidsTrafikdataDataProvider();
-            //await realtidsTrafikdata.GetRealtidsTrafikdataAarhus();
-
+            //// Update RuteMaalePunkterMetadata with new information
             //var ruteMaalePunkterMetadata = new RuteMaalepunkterMetadataDataProvider();
             //await ruteMaalePunkterMetadata.GetruteMaalepunkterMetadataAarhus();
         }
@@ -78,6 +78,7 @@
             {
                 await _realtidsTrafikdataDataProvider.GetRealtidsTrafikdataAarhus();
                 _ticks = 0;
+                buttonGetNewTrafikdataUpdate.Enabled = true;
             }
         }
 
