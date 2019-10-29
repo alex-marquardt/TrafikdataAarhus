@@ -1,0 +1,36 @@
+CREATE PROCEDURE [dbo].InsertRuteMaalepunkterMetadata 
+	@Id int,
+	@ReportName nvarchar(50),
+	@ReportId int,
+	@Organisation nvarchar(50),
+	@RbaId int,
+	@Point1Name nvarchar(50),
+	@Point1Latitude float, 
+	@Point1Longitude float,
+	@Point1Street nvarchar(50),
+	@Point1StreetNumber nvarchar(50),
+	@Point1PostalCode nvarchar(50),
+	@Point1Country nvarchar(50),
+	@Point2Name nvarchar(50),
+	@Point2Latitude float,
+	@Point2Longitude float,
+	@Point2StreetNumber nvarchar(50),
+	@Point2PostalCode nvarchar(50),
+	@Point2City nvarchar(50),
+	@Point2Country nvarchar(50),
+	@DurationInSeconds int,
+	@DistanceInMeters int,
+	@NdtInKmh int,
+	@RoadType nvarchar(50),
+	@Point1City nvarchar(50),
+	@Point2Street nvarchar(50)   
+AS
+	INSERT INTO [dbo].[RuteMaalepunkterMetadata] ([Id], [ReportName], [ReportId], [Organisation], [RbaId], 
+	[Point1Name], [Point1Latitude], [Point1Longitude], [Point1Street], [Point1StreetNumber], [Point1PostalCode], [Point1Country], 
+	[Point2Name], [Point2Latitude], [Point2Longitude], [Point2StreetNumber], [Point2PostalCode], [Point2City], [Point2Country], 
+	[DurationInSeconds], [DistanceInMeters], [NdtInKmh], [RoadType], [Point1City], [Point2Street])
+	VALUES (@Id, @ReportName, @ReportId, @Organisation, @RbaId, 
+	@Point1Name, @Point1Latitude, @Point1Longitude, @Point1Street, @Point1StreetNumber, @Point1PostalCode, @Point1Country,
+	@Point2Name, @Point2Latitude, @Point2Longitude, @Point2StreetNumber, @Point2PostalCode, @Point2City, @Point2Country, 
+	@DurationInSeconds, @DistanceInMeters, @NdtInKmh, @RoadType, @Point1City, @Point2Street);
+GO

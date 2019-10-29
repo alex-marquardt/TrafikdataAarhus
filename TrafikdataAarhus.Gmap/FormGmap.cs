@@ -66,7 +66,7 @@
 
             //// Update RuteMaalePunkterMetadata with new information
             //var ruteMaalePunkterMetadata = new RuteMaalepunkterMetadataDataProvider();
-            //await ruteMaalePunkterMetadata.GetruteMaalepunkterMetadataAarhus();
+            //ruteMaalePunkterMetadata.GetruteMaalepunkterMetadataAarhus();
         }
 
         // Timer for update realtidstrafikdata tabel every 5 min
