@@ -1,23 +1,23 @@
 # TrafikdataAarhus
-Trafikdata Aarhus is a jobinterview project case made by ATEA made for testing my skills as a software developer.
+Trafikdata Aarhus is a jobinterview project case made by ATEA to test my skills as a software developer.
 
 ## Pupose of the project
-The purpose of this project was to to receive data from a api (https://portal.opendata.dk/dataset/realtids-trafikdata), model it, use the data to bring insight/visualize it to the user and update the data every 5 min. I have used: .Net Framework, Dapper, MSSQL, Windows Form and a library called GMap. 
+The purpose of this project is to to receive data from the api: https://portal.opendata.dk/dataset/realtids-trafikdata (2 datasets), model the data, use the data to bring insight/visualize it to the user and update the received data every 5 min. IN the project I have used: .Net Framework, Dapper, MSSQL, Windows Form and a library called GMap. 
 
 ## My work
-The backend-code, databasescript and design in Windows Forms is made by myself. The coordinates and map is a library called GMap for .NET Framework.
+The backend-code, databasescript and design made in Windows Forms is donw by myself. The coordinates and map is a external library called GMap.
 
 ## How to use the program
-1. Start by running the database script in the following order: 
-    - CreateAarhusTrafikdataDatabase.sql.
+1. Start by running the database scripts in the following order: 
+    - CreateAarhusTrafikdataDatabase.sql (you can modify it).
     - CreateRealtidsTrafikdataTable.sql.
     - CreateRuteMaalepunkterMetadataTable.sql.
     - InsertRealtidsTrafikdata.sql.
     - InsertRuteMaalepunkterMetadata.sql.
     - SelectAllTrafikdata.sql.
 
-2. Open the program.
-3. In the RuteMaalepunkterMetadataDataProvider class and in the methode called "InsertRuteMaalepunkterMetadata" change the input parameter "new SqlConnetion("")" to your database connectionstring.
-4. In the RealtidsTrafikdataDataProvider class and in the methode called "InsertRealtidsTrafikdata" change the input parameter "new SqlConnetion("")" to your database connectionstring.
-5. Run the methode "GetruteMaalepunkterMetadataAarhus" to insert data in the database. 
-6. Run the program and click in the DataGriedView to see the data's coordinates. 
+2. Open the solution.
+3. In the RuteMaalepunkterMetadataDataProvider class, in the methode called "InsertRuteMaalepunkterMetadata" change the input parameter "new SqlConnetion("your database connectionstring")" to your database connectionstring.
+4. In the RealtidsTrafikdataDataProvider class, in the methode called "InsertRealtidsTrafikdata" change the input parameter "new SqlConnetion("your database connectionstring")" to your database connectionstring.
+5. Run the methode "GetruteMaalepunkterMetadataAarhus" to insert data for route measurement in the database. 
+6. Run the program and click on a row in the DataGriedView to see the route's data and coordinates on the map.
