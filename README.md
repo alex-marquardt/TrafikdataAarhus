@@ -9,12 +9,12 @@ The backend-code, databasescript and design in Windows Forms is made by myself. 
 
 ## How to use the program
 1. Start by running the database script in the following order: 
-  1. CreateAarhusTrafikdataDatabase.sql.
-  2. CreateRealtidsTrafikdataTable.sql.
-  3. CreateRuteMaalepunkterMetadataTable.sql.
-  4. InsertRealtidsTrafikdata.sql.
-  5. InsertRuteMaalepunkterMetadata.sql.
-  6. SelectAllTrafikdata.sql.
+    - CreateAarhusTrafikdataDatabase.sql.
+    - CreateRealtidsTrafikdataTable.sql.
+    - CreateRuteMaalepunkterMetadataTable.sql.
+    - InsertRealtidsTrafikdata.sql.
+    - InsertRuteMaalepunkterMetadata.sql.
+    - SelectAllTrafikdata.sql.
 
 2. Open the program.
 3. In the RuteMaalepunkterMetadataDataProvider class and in the methode called "InsertRuteMaalepunkterMetadata" change the input parameter "new SqlConnetion("")" to your database connectionstring.
