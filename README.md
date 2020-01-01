@@ -1,15 +1,15 @@
 # TrafikdataAarhus
-Trafikdata Aarhus is a jobinterview project case made by ATEA to test my skills as a software developer.
+Trafikdata Aarhus is a jobinterview project made by ATEA to test my skills as a software developer.
 
 ## Pupose of the project
-The purpose of this project is to to receive data from the api: https://portal.opendata.dk/dataset/realtids-trafikdata (2 datasets), model the data, use the data to bring insight/visualize it to the user and update the received data every 5 min. IN the project I have used: .Net Framework, Dapper, MSSQL, Windows Form and a library called GMap. 
+The purpose of this project is to to receive data from the api: https://portal.opendata.dk/dataset/realtids-trafikdata (2 datasets), model the data, use the data to bring insight and visualize it to the enduser and update the received data every 5 min. In the project there is used: .Net Framework, Dapper, MSSQL, Windows Form and a library called GMap. 
 
 ## My work
 The backend-code, databasescript and design made in Windows Forms is donw by myself. The coordinates and map is a external library called GMap.
 
 ## How to use the program
 1. Start by running the database scripts in the following order: 
-    - CreateAarhusTrafikdataDatabase.sql (you can modify it).
+    - CreateAarhusTrafikdataDatabase.sql (modify the database path to your own path).
     - CreateRealtidsTrafikdataTable.sql.
     - CreateRuteMaalepunkterMetadataTable.sql.
     - InsertRealtidsTrafikdata.sql.
